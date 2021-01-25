@@ -57,7 +57,7 @@ jobs:
         # sed -i '/自定义项/d' configs/templates/$TNAME.config
         # echo "自定义项=y" >> configs/templates/$TNAME.config
         #########################################################################################
-        # cp -f configs/templates/$TNAME.config .config
+        cp -f configs/templates/$TNAME.config .config
         ./clear_tree
         fakeroot ./build_firmware_modify $TNAME
         sudo mv -f images/*.trx /opt/images/
