@@ -43,7 +43,7 @@ jobs:
         # 因不同型号配置功能不一样，所以先把配置项删除，如果你自己要添加其他的，也要写上删除这一条，切记！！！
         ################################################################################################
         sed -i '/CONFIG_FIRMWARE_INCLUDE_XFRM/d' configs/templates/$TNAME.config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_QOS/d' configs/templates/$TNAME.config
+        # sed -i '/CONFIG_FIRMWARE_INCLUDE_QOS/d' configs/templates/$TNAME.config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_WINS/d' configs/templates/$TNAME.config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_RPL2TP/d' configs/templates/$TNAME.config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_DDNS_SSL/d' configs/templates/$TNAME.config
@@ -51,24 +51,24 @@ jobs:
         sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENVPN/d' configs/templates/$TNAME.config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SSWAN/d' configs/templates/$TNAME.config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE/d' configs/templates/$TNAME.config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT/d' configs/templates/$TNAME.config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_GDUT_DRCOM/d' configs/templates/$TNAME.config
+        # sed -i '/CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT/d' configs/templates/$TNAME.config
+        # sed -i '/CONFIG_FIRMWARE_INCLUDE_GDUT_DRCOM/d' configs/templates/$TNAME.config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_MINIEAP/d' configs/templates/$TNAME.config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_NJIT_CLIENT/d' configs/templates/$TNAME.config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_SSSERVER/d' configs/templates/$TNAME.config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_SERVER/d' configs/templates/$TNAME.config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_CLIENT/d' configs/templates/$TNAME.config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_CMD/d' configs/templates/$TNAME.config
+        # sed -i '/CONFIG_FIRMWARE_INCLUDE_NJIT_CLIENT/d' configs/templates/$TNAME.config
+        # sed -i '/CONFIG_FIRMWARE_INCLUDE_SSSERVER/d' configs/templates/$TNAME.config
+        # sed -i '/CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_SERVER/d' configs/templates/$TNAME.config
+        # sed -i '/CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_CLIENT/d' configs/templates/$TNAME.config
+        # sed -i '/CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_CMD/d' configs/templates/$TNAME.config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_MENTOHUST/d' configs/templates/$TNAME.config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_FRPC/d' configs/templates/$TNAME.config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_FRPS/d' configs/templates/$TNAME.config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_TUNSAFE/d' configs/templates/$TNAME.config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_WIREGUARD/d' configs/templates/$TNAME.config
+        # sed -i '/CONFIG_FIRMWARE_INCLUDE_FRPC/d' configs/templates/$TNAME.config
+        # sed -i '/CONFIG_FIRMWARE_INCLUDE_FRPS/d' configs/templates/$TNAME.config
+        # sed -i '/CONFIG_FIRMWARE_INCLUDE_TUNSAFE/d' configs/templates/$TNAME.config
+        # sed -i '/CONFIG_FIRMWARE_INCLUDE_WIREGUARD/d' configs/templates/$TNAME.config
         ######################################################################
         # 以下选项是定义你需要的功能（y=集成,n=忽略），重新写入到configs/templates/$TNAME.config文件
         ######################################################################
         echo "CONFIG_FIRMWARE_INCLUDE_XFRM=y" >> configs/templates/$TNAME.config
-        echo "CONFIG_FIRMWARE_INCLUDE_QOS=y" >> configs/templates/$TNAME.config
+        # echo "CONFIG_FIRMWARE_INCLUDE_QOS=y" >> configs/templates/$TNAME.config
         echo "CONFIG_FIRMWARE_INCLUDE_WINS=y" >> configs/templates/$TNAME.config
         echo "CONFIG_FIRMWARE_INCLUDE_RPL2TP=y" >> configs/templates/$TNAME.config
         echo "CONFIG_FIRMWARE_INCLUDE_DDNS_SSL=y" >> configs/templates/$TNAME.config
@@ -76,19 +76,19 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_OPENVPN=y" >> configs/templates/$TNAME.config
         echo "CONFIG_FIRMWARE_INCLUDE_SSWAN=y" >> configs/templates/$TNAME.config
         echo "CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE=y" >> configs/templates/$TNAME.config
-        echo "CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT=y" >> configs/templates/$TNAME.config
-        echo "CONFIG_FIRMWARE_INCLUDE_GDUT_DRCOM=y" >> configs/templates/$TNAME.config
+        # echo "CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT=y" >> configs/templates/$TNAME.config
+        # echo "CONFIG_FIRMWARE_INCLUDE_GDUT_DRCOM=y" >> configs/templates/$TNAME.config
         echo "CONFIG_FIRMWARE_INCLUDE_MINIEAP=y" >> configs/templates/$TNAME.config
-        echo "CONFIG_FIRMWARE_INCLUDE_NJIT_CLIENT=y" >> configs/templates/$TNAME.config
-        echo "CONFIG_FIRMWARE_INCLUDE_SSSERVER=y" >> configs/templates/$TNAME.config
-        echo "CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_SERVER=y" >> configs/templates/$TNAME.config
-        echo "CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_CLIENT=y" >> configs/templates/$TNAME.config
-        echo "CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_CMD=y" >> configs/templates/$TNAME.config
+        # echo "CONFIG_FIRMWARE_INCLUDE_NJIT_CLIENT=y" >> configs/templates/$TNAME.config
+        # echo "CONFIG_FIRMWARE_INCLUDE_SSSERVER=y" >> configs/templates/$TNAME.config
+        # echo "CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_SERVER=y" >> configs/templates/$TNAME.config
+        # echo "CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_CLIENT=y" >> configs/templates/$TNAME.config
+        # echo "CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_CMD=y" >> configs/templates/$TNAME.config
         echo "CONFIG_FIRMWARE_INCLUDE_MENTOHUST=y" >> configs/templates/$TNAME.config
-        echo "CONFIG_FIRMWARE_INCLUDE_FRPC=y" >> configs/templates/$TNAME.config
-        echo "CONFIG_FIRMWARE_INCLUDE_FRPS=y" >> configs/templates/$TNAME.config
-        echo "CONFIG_FIRMWARE_INCLUDE_TUNSAFE=y" >> configs/templates/$TNAME.config
-        echo "CONFIG_FIRMWARE_INCLUDE_WIREGUARD=y" >> configs/templates/$TNAME.config
+        # echo "CONFIG_FIRMWARE_INCLUDE_FRPC=y" >> configs/templates/$TNAME.config
+        # echo "CONFIG_FIRMWARE_INCLUDE_FRPS=y" >> configs/templates/$TNAME.config
+        # echo "CONFIG_FIRMWARE_INCLUDE_TUNSAFE=y" >> configs/templates/$TNAME.config
+        # echo "CONFIG_FIRMWARE_INCLUDE_WIREGUARD=y" >> configs/templates/$TNAME.config
         #########################################################################################
         # 自定义添加其它功能请参考源码configs/templates/目录下的config文件。按照上面的格式添加即可
         # 格式如下：
