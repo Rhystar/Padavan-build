@@ -59,7 +59,7 @@ jobs:
         # sed -i '/CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_SERVER/d' configs/templates/$TNAME.config
         # sed -i '/CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_CLIENT/d' configs/templates/$TNAME.config
         # sed -i '/CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_CMD/d' configs/templates/$TNAME.config
-        # sed -i '/CONFIG_FIRMWARE_INCLUDE_MENTOHUST/d' configs/templates/$TNAME.config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_MENTOHUST/d' configs/templates/$TNAME.config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_FRPC/d' configs/templates/$TNAME.config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_FRPS/d' configs/templates/$TNAME.config
         # sed -i '/CONFIG_FIRMWARE_INCLUDE_TUNSAFE/d' configs/templates/$TNAME.config
@@ -84,7 +84,7 @@ jobs:
         # echo "CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_SERVER=y" >> configs/templates/$TNAME.config
         # echo "CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_CLIENT=y" >> configs/templates/$TNAME.config
         # echo "CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_CMD=y" >> configs/templates/$TNAME.config
-        # echo "CONFIG_FIRMWARE_INCLUDE_MENTOHUST=y" >> configs/templates/$TNAME.config
+        echo "CONFIG_FIRMWARE_INCLUDE_MENTOHUST=y" >> configs/templates/$TNAME.config
         echo "CONFIG_FIRMWARE_INCLUDE_FRPC=y" >> configs/templates/$TNAME.config
         echo "CONFIG_FIRMWARE_INCLUDE_FRPS=y" >> configs/templates/$TNAME.config
         # echo "CONFIG_FIRMWARE_INCLUDE_TUNSAFE=y" >> configs/templates/$TNAME.config
